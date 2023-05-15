@@ -223,8 +223,8 @@ def run(parser, args):
     #cmds.append("muscle -in %s.muscle.in.fasta -out %s.muscle.out.fasta" % (args.sample, args.sample))
 
     # 12) get some QC stats
-    if args.strict:
-        cmds.append("artic_get_stats --scheme {} --align-report {}.alignreport.txt --vcf-report {}.vcfreport.txt {}" .format(bed, args.sample, args.sample, args.sample))
+  #  if args.strict:
+   #     cmds.append("artic_get_stats --scheme {} --align-report {}.alignreport.txt --vcf-report {}.vcfreport.txt {}" .format(bed, args.sample, args.sample, args.sample))
 
     # 13) setup the log file and run the pipeline commands
     log = "%s.minion.log.txt" % (args.sample)
