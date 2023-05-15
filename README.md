@@ -32,7 +32,13 @@ There are **2 workflows** baked into this pipeline, one which uses signal data (
 ### Via conda
 
 ```sh
-conda install -c bioconda artic
+conda install -c bioconda -c conda-forge artic
+```
+
+If conda reports that nothing provides particular packages when running the above command ensure your `channel_priority` is set to `flexible` using the following command:
+
+```sh
+conda config --set channel_priority false
 ```
 
 ### Via source
