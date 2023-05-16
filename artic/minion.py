@@ -186,13 +186,13 @@ def run(parser, args):
 
     # 8) check and filter the VCFs
     ## if using strict, run the vcf checker to remove vars present only once in overlap regions (this replaces the original merged vcf from the previous step)
-    if args.strict:
-        cmds.append("artic-tools check_vcf --summaryOut {}.vcfreport.txt --vcfOut {}.merged.filtered.vcf {}.merged.vcf.gz {} 2> {}.vcfcheck.log" .format(args.sample, args.sample, args.sample, bed, args.sample))
-        cmds.append("mv %s.merged.filtered.vcf %s.merged.vcf" % (args.sample, args.sample))
-        cmds.append("bgzip -f %s.merged.vcf" % (args.sample))
-        cmds.append("tabix -f -p vcf %s.merged.vcf.gz" % (args.sample))
-    else:
-        cmds.append("artic-tools check_vcf --summaryOut {}.vcfreport.txt {}.merged.vcf.gz {} 2> {}.vcfcheck.log" .format(args.sample, args.sample, bed, args.sample))
+   # if args.strict:
+   #     cmds.append("artic-tools check_vcf --summaryOut {}.vcfreport.txt --vcfOut {}.merged.filtered.vcf {}.merged.vcf.gz {} 2> {}.vcfcheck.log" .format(args.sample, args.sample, args.sample, bed, args.sample))
+    #    cmds.append("mv %s.merged.filtered.vcf %s.merged.vcf" % (args.sample, args.sample))
+   #     cmds.append("bgzip -f %s.merged.vcf" % (args.sample))
+  #      cmds.append("tabix -f -p vcf %s.merged.vcf.gz" % (args.sample))
+  #  else:
+ #       cmds.append("artic-tools check_vcf --summaryOut {}.vcfreport.txt {}.merged.vcf.gz {} 2> {}.vcfcheck.log" .format(args.sample, args.sample, bed, args.sample))
 
     ## set up some name holder vars for ease
     if args.medaka:
