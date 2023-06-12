@@ -220,7 +220,7 @@ def run(parser, args):
     fasta_header = "%s/ARTIC/%s" % (args.sample, method)
     cmds.append("artic_fasta_header %s.consensus.fasta \"%s\"" % (args.sample, fasta_header))
     cmds.append("cat %s.consensus.fasta %s > %s.muscle.in.fasta" % (args.sample, ref, args.sample))
-    cmds.append("muscle -in %s.muscle.in.fasta -out %s.muscle.out.fasta" % (args.sample, args.sample))
+    cmds.append("muscle -align %s.muscle.in.fasta -output %s.muscle.out.fasta" % (args.sample, args.sample))
 
     # 12) get some QC stats
  #   cmds.append("artic_get_stats --min-depth {} --scheme {} --align-report {}.alignreport.txt --vcf-report {}.vcfreport.txt {}" .format(args.min_depth, bed, args.sample, args.sample, args.sample))
