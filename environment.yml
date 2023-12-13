@@ -5,13 +5,13 @@ channels:
   - defaults
 dependencies:
   - artic-porechop =0.3.2pre
-  - artic-tools =0.2.6
+  - artic-tools =0.3.1
   - longshot =0.4.5
   - bcftools =1.15.1
   - biopython =1.79
   - bwa =0.7.17
   - clint =0.5.1
-  - htslib =1.15.1
+  - htslib =1.9
  # - medaka =1.7.2
   - minimap2 =2.24
   - multiqc =1.13
@@ -28,4 +28,4 @@ dependencies:
   - samtools =1.15
   - tqdm =4.64
   - pip:
-      - medaka==1.7.3
+      - medaka==1.8.1
